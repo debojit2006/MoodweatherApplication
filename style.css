@@ -1,0 +1,103 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+}
+
+h1 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.mood-selector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.mood-btn {
+    background-color: #ffffff;
+    color: #5b3a89;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.mood-btn:hover {
+    transform: translateY(-3px);
+    background-color: #f0f0f0;
+}
+
+/* Result styles */
+#result-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 25px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#weather-info {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+#weather-info .city {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+#suggestion-info {
+    font-size: 1.4rem;
+    margin-top: 15px;
+    font-weight: 400;
+    color: #e0d9ff;
+}
+
+#error-info {
+    color: #ff8a80;
+    font-size: 1.1rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Simple CSS Loader */
+#loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #764ba2;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
